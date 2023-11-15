@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body{
+    font-size: 12px;
+    font-family: "Roboto";
+    background-color: #ebebeb;
+}
+
+header{
+    background-color: #EAC926;
+}
+
+.logo-y-barra{
+    display: flex;
+}
+
+.logo{
+    width: 50%;
+    padding: 1em;
+}
+
+header img{
+    width: 40vw;
+}
+
+.barra-busqueda{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barra-busqueda input{
+    width:75%;
+    border: none;
+    height: 2.2rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.barra-busqueda button{
+    border: none;
+    height: 2.2rem;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: white;
+    padding: 4px;
+    color: gray;
+}
+
+.compra-en-cuotas{
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.burger-menu{
+    background-color: #1259c3;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    margin-bottom: 10px;
+    margin: 2% 45%;
+    border-radius: 5px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    display: none;
+}
+
+nav{
+    display: flex;
+}
+
+header nav img{
+    width: 100%;
+}
+
+main{
+    text-align: center;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    margin: auto;
+}
+
+.grupo-articulos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+article{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulares{
+    font-size: 24px;
+    text-align: left;
+    color: #666;
+    margin-left: 0.6rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.precio-y-descuento{
+    display: flex;
+    flex-direction: row;
+}
+
+.precios{
+    font-size: 18px;
+    width: 30%;
+}
+
+.descuentos{
+    font-size: 16px;
+    color: #39b54a;
+    font-weight: lighter;
+    width: 70%;
+    padding-left: 1rem;
+}
+
+.descripciones{
+    font-size: 16px;
+    font-weight: lighter;
+    color: #666;
+    display: none;
+}
+
+.detalles-productos{
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+    background-color: white;
+    width: 16rem;
+    text-align: left;
+}
+
+p.envio{
+    position: relative;
+}
+
+.fa-truck{
+/*    border: 1px solid #39b54a;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;*/
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -31px;
+}
+
+.fa-truck:hover{
+    transform: rotate(-90deg);
+    transition: 1s linear;
+}
+
+article img{
+    width: 16rem;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+footer{
+    text-align: center;
+    background-color: white;
+    margin-top: 1rem;
+    padding-top: 1px;
+    color: #666;
+}
+
+footer h2 i{
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #1259c3;
+}
+
+footer section{
+    margin-top: 3rem;
+}
+
+.copyright{
+    text-align: left;
+    margin-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+/*navegación en tablets*/
+@media (min-width: 520px){
+
+    header img{
+        width: 30vw;
+    }
+
+    .logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    nav{
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+
+    .lista-1, .lista-2{
+        display: flex;
+        flex-direction: row;
+    }
+
+    li{
+        display: flex;
+        margin-right: 1vw;
+        margin-left: 1vw;
+    }
+
+    .burger-menu{
+        display: none;
+    }
+
+    .grupo-articulos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    article{
+        width: fit-content;
+    }
+
+    .descripciones{
+        display: contents;
+    }
+
+}
+
+/*navegación en desktop*/ 
+@media(min-width: 769px){
+
+    header img{
+        width: 20vw;
+    }
+
+    .header-sin-nav{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .logo-y-barra{
+        width: 66.7%;
+    }
+
+    .compra-en-cuotas{
+        width: 33.3%;
+        display: flex;
+        align-items: center;
+    }
+
+    .detalles-productos .descripciones{
+        display: none;
+    }
+
+    .detalles-productos:hover .descripciones{
+        display: flex;
+        transition: 1s linear;
+    }
+
+    article:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .iconosFooter{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .iconosFooter i:hover{ 
+        color: #EAC926;
+    }
+}
