@@ -287,7 +287,7 @@ footer section{
         display: none;
     }
 
-    .detalles-productos:hover .descripciones{
+    article:hover .descripciones{
         display: flex;
         transition: 1s linear;
     }
